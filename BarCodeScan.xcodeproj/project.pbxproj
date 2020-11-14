@@ -9,21 +9,59 @@
 /* Begin PBXBuildFile section */
 		67CBEDFA255FEF7400F38C52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CBEDF9255FEF7400F38C52 /* AppDelegate.swift */; };
 		67CBEDFC255FEF7400F38C52 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CBEDFB255FEF7400F38C52 /* SceneDelegate.swift */; };
-		67CBEDFE255FEF7400F38C52 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CBEDFD255FEF7400F38C52 /* ViewController.swift */; };
-		67CBEE01255FEF7400F38C52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67CBEDFF255FEF7400F38C52 /* Main.storyboard */; };
 		67CBEE03255FEF7500F38C52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67CBEE02255FEF7500F38C52 /* Assets.xcassets */; };
 		67CBEE06255FEF7500F38C52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67CBEE04255FEF7500F38C52 /* LaunchScreen.storyboard */; };
+		67CBEE32255FEFE200F38C52 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CBEE26255FEFE200F38C52 /* HomePresenter.swift */; };
+		67CBEE33255FEFE200F38C52 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CBEE28255FEFE200F38C52 /* HomeModel.swift */; };
+		67CBEE34255FEFE200F38C52 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CBEE2A255FEFE200F38C52 /* HomeView.swift */; };
+		67CBEE35255FEFE200F38C52 /* HomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67CBEE2B255FEFE200F38C52 /* HomeView.xib */; };
+		67CBEE36255FEFE200F38C52 /* HomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CBEE2D255FEFE200F38C52 /* HomeProtocols.swift */; };
+		67CBEE37255FEFE200F38C52 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CBEE2F255FEFE200F38C52 /* HomeInteractor.swift */; };
+		67CBEE38255FEFE200F38C52 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CBEE31255FEFE200F38C52 /* HomeRouter.swift */; };
+		67CBEE57255FEFF900F38C52 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CBEE4B255FEFF900F38C52 /* DetailPresenter.swift */; };
+		67CBEE58255FEFF900F38C52 /* DetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CBEE4D255FEFF900F38C52 /* DetailModel.swift */; };
+		67CBEE59255FEFF900F38C52 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CBEE4F255FEFF900F38C52 /* DetailView.swift */; };
+		67CBEE5A255FEFF900F38C52 /* DetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67CBEE50255FEFF900F38C52 /* DetailView.xib */; };
+		67CBEE5B255FEFF900F38C52 /* DetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CBEE52255FEFF900F38C52 /* DetailProtocols.swift */; };
+		67CBEE5C255FEFF900F38C52 /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CBEE54255FEFF900F38C52 /* DetailInteractor.swift */; };
+		67CBEE5D255FEFF900F38C52 /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CBEE56255FEFF900F38C52 /* DetailRouter.swift */; };
+		67CBEE7C255FF01800F38C52 /* ScanPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CBEE70255FF01800F38C52 /* ScanPresenter.swift */; };
+		67CBEE7D255FF01800F38C52 /* ScanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CBEE72255FF01800F38C52 /* ScanModel.swift */; };
+		67CBEE7E255FF01800F38C52 /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CBEE74255FF01800F38C52 /* ScanView.swift */; };
+		67CBEE7F255FF01800F38C52 /* ScanView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67CBEE75255FF01800F38C52 /* ScanView.xib */; };
+		67CBEE80255FF01800F38C52 /* ScanProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CBEE77255FF01800F38C52 /* ScanProtocols.swift */; };
+		67CBEE81255FF01800F38C52 /* ScanInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CBEE79255FF01800F38C52 /* ScanInteractor.swift */; };
+		67CBEE82255FF01800F38C52 /* ScanRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CBEE7B255FF01800F38C52 /* ScanRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		67CBEDF6255FEF7400F38C52 /* BarCodeScan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarCodeScan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67CBEDF9255FEF7400F38C52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67CBEDFB255FEF7400F38C52 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		67CBEDFD255FEF7400F38C52 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		67CBEE00255FEF7400F38C52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		67CBEE02255FEF7500F38C52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		67CBEE05255FEF7500F38C52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		67CBEE07255FEF7500F38C52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67CBEE26255FEFE200F38C52 /* HomePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		67CBEE28255FEFE200F38C52 /* HomeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		67CBEE2A255FEFE200F38C52 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		67CBEE2B255FEFE200F38C52 /* HomeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeView.xib; sourceTree = "<group>"; };
+		67CBEE2D255FEFE200F38C52 /* HomeProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeProtocols.swift; sourceTree = "<group>"; };
+		67CBEE2F255FEFE200F38C52 /* HomeInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		67CBEE31255FEFE200F38C52 /* HomeRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		67CBEE4B255FEFF900F38C52 /* DetailPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
+		67CBEE4D255FEFF900F38C52 /* DetailModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailModel.swift; sourceTree = "<group>"; };
+		67CBEE4F255FEFF900F38C52 /* DetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		67CBEE50255FEFF900F38C52 /* DetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailView.xib; sourceTree = "<group>"; };
+		67CBEE52255FEFF900F38C52 /* DetailProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailProtocols.swift; sourceTree = "<group>"; };
+		67CBEE54255FEFF900F38C52 /* DetailInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
+		67CBEE56255FEFF900F38C52 /* DetailRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
+		67CBEE70255FF01800F38C52 /* ScanPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanPresenter.swift; sourceTree = "<group>"; };
+		67CBEE72255FF01800F38C52 /* ScanModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanModel.swift; sourceTree = "<group>"; };
+		67CBEE74255FF01800F38C52 /* ScanView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanView.swift; sourceTree = "<group>"; };
+		67CBEE75255FF01800F38C52 /* ScanView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScanView.xib; sourceTree = "<group>"; };
+		67CBEE77255FF01800F38C52 /* ScanProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanProtocols.swift; sourceTree = "<group>"; };
+		67CBEE79255FF01800F38C52 /* ScanInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanInteractor.swift; sourceTree = "<group>"; };
+		67CBEE7B255FF01800F38C52 /* ScanRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +94,218 @@
 		67CBEDF8255FEF7400F38C52 /* BarCodeScan */ = {
 			isa = PBXGroup;
 			children = (
-				67CBEDF9255FEF7400F38C52 /* AppDelegate.swift */,
-				67CBEDFB255FEF7400F38C52 /* SceneDelegate.swift */,
-				67CBEDFD255FEF7400F38C52 /* ViewController.swift */,
-				67CBEDFF255FEF7400F38C52 /* Main.storyboard */,
-				67CBEE02255FEF7500F38C52 /* Assets.xcassets */,
-				67CBEE04255FEF7500F38C52 /* LaunchScreen.storyboard */,
+				67CBEE24255FEFE200F38C52 /* Home */,
+				67CBEE6E255FF01800F38C52 /* Scan */,
+				67CBEE49255FEFF900F38C52 /* Detail */,
+				67CBEE11255FEFA200F38C52 /* Utils */,
+				67CBEE10255FEF9B00F38C52 /* Project */,
 				67CBEE07255FEF7500F38C52 /* Info.plist */,
 			);
 			path = BarCodeScan;
+			sourceTree = "<group>";
+		};
+		67CBEE10255FEF9B00F38C52 /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				67CBEDF9255FEF7400F38C52 /* AppDelegate.swift */,
+				67CBEDFB255FEF7400F38C52 /* SceneDelegate.swift */,
+			);
+			path = Project;
+			sourceTree = "<group>";
+		};
+		67CBEE11255FEFA200F38C52 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				67CBEE04255FEF7500F38C52 /* LaunchScreen.storyboard */,
+				67CBEE02255FEF7500F38C52 /* Assets.xcassets */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		67CBEE24255FEFE200F38C52 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				67CBEE29255FEFE200F38C52 /* View */,
+				67CBEE2E255FEFE200F38C52 /* Interactor */,
+				67CBEE2C255FEFE200F38C52 /* Protocols */,
+				67CBEE25255FEFE200F38C52 /* Presenter */,
+				67CBEE27255FEFE200F38C52 /* Model */,
+				67CBEE30255FEFE200F38C52 /* Router */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		67CBEE25255FEFE200F38C52 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				67CBEE26255FEFE200F38C52 /* HomePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		67CBEE27255FEFE200F38C52 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				67CBEE28255FEFE200F38C52 /* HomeModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		67CBEE29255FEFE200F38C52 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				67CBEE2A255FEFE200F38C52 /* HomeView.swift */,
+				67CBEE2B255FEFE200F38C52 /* HomeView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		67CBEE2C255FEFE200F38C52 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				67CBEE2D255FEFE200F38C52 /* HomeProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		67CBEE2E255FEFE200F38C52 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				67CBEE2F255FEFE200F38C52 /* HomeInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		67CBEE30255FEFE200F38C52 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				67CBEE31255FEFE200F38C52 /* HomeRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		67CBEE49255FEFF900F38C52 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				67CBEE4E255FEFF900F38C52 /* View */,
+				67CBEE53255FEFF900F38C52 /* Interactor */,
+				67CBEE51255FEFF900F38C52 /* Protocols */,
+				67CBEE4A255FEFF900F38C52 /* Presenter */,
+				67CBEE4C255FEFF900F38C52 /* Model */,
+				67CBEE55255FEFF900F38C52 /* Router */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		67CBEE4A255FEFF900F38C52 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				67CBEE4B255FEFF900F38C52 /* DetailPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		67CBEE4C255FEFF900F38C52 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				67CBEE4D255FEFF900F38C52 /* DetailModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		67CBEE4E255FEFF900F38C52 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				67CBEE4F255FEFF900F38C52 /* DetailView.swift */,
+				67CBEE50255FEFF900F38C52 /* DetailView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		67CBEE51255FEFF900F38C52 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				67CBEE52255FEFF900F38C52 /* DetailProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		67CBEE53255FEFF900F38C52 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				67CBEE54255FEFF900F38C52 /* DetailInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		67CBEE55255FEFF900F38C52 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				67CBEE56255FEFF900F38C52 /* DetailRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		67CBEE6E255FF01800F38C52 /* Scan */ = {
+			isa = PBXGroup;
+			children = (
+				67CBEE73255FF01800F38C52 /* View */,
+				67CBEE78255FF01800F38C52 /* Interactor */,
+				67CBEE76255FF01800F38C52 /* Protocols */,
+				67CBEE6F255FF01800F38C52 /* Presenter */,
+				67CBEE71255FF01800F38C52 /* Model */,
+				67CBEE7A255FF01800F38C52 /* Router */,
+			);
+			path = Scan;
+			sourceTree = "<group>";
+		};
+		67CBEE6F255FF01800F38C52 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				67CBEE70255FF01800F38C52 /* ScanPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		67CBEE71255FF01800F38C52 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				67CBEE72255FF01800F38C52 /* ScanModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		67CBEE73255FF01800F38C52 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				67CBEE74255FF01800F38C52 /* ScanView.swift */,
+				67CBEE75255FF01800F38C52 /* ScanView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		67CBEE76255FF01800F38C52 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				67CBEE77255FF01800F38C52 /* ScanProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		67CBEE78255FF01800F38C52 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				67CBEE79255FF01800F38C52 /* ScanInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		67CBEE7A255FF01800F38C52 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				67CBEE7B255FF01800F38C52 /* ScanRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,6 +336,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1200;
 				LastUpgradeCheck = 1200;
+				ORGANIZATIONNAME = AFSopra;
 				TargetAttributes = {
 					67CBEDF5255FEF7400F38C52 = {
 						CreatedOnToolsVersion = 12.0.1;
@@ -125,8 +367,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				67CBEE06255FEF7500F38C52 /* LaunchScreen.storyboard in Resources */,
+				67CBEE5A255FEFF900F38C52 /* DetailView.xib in Resources */,
 				67CBEE03255FEF7500F38C52 /* Assets.xcassets in Resources */,
-				67CBEE01255FEF7400F38C52 /* Main.storyboard in Resources */,
+				67CBEE35255FEFE200F38C52 /* HomeView.xib in Resources */,
+				67CBEE7F255FF01800F38C52 /* ScanView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,23 +381,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67CBEDFE255FEF7400F38C52 /* ViewController.swift in Sources */,
+				67CBEE7D255FF01800F38C52 /* ScanModel.swift in Sources */,
+				67CBEE82255FF01800F38C52 /* ScanRouter.swift in Sources */,
+				67CBEE33255FEFE200F38C52 /* HomeModel.swift in Sources */,
+				67CBEE32255FEFE200F38C52 /* HomePresenter.swift in Sources */,
+				67CBEE57255FEFF900F38C52 /* DetailPresenter.swift in Sources */,
+				67CBEE7C255FF01800F38C52 /* ScanPresenter.swift in Sources */,
 				67CBEDFA255FEF7400F38C52 /* AppDelegate.swift in Sources */,
+				67CBEE5B255FEFF900F38C52 /* DetailProtocols.swift in Sources */,
+				67CBEE5D255FEFF900F38C52 /* DetailRouter.swift in Sources */,
+				67CBEE34255FEFE200F38C52 /* HomeView.swift in Sources */,
+				67CBEE59255FEFF900F38C52 /* DetailView.swift in Sources */,
+				67CBEE36255FEFE200F38C52 /* HomeProtocols.swift in Sources */,
+				67CBEE5C255FEFF900F38C52 /* DetailInteractor.swift in Sources */,
+				67CBEE58255FEFF900F38C52 /* DetailModel.swift in Sources */,
+				67CBEE38255FEFE200F38C52 /* HomeRouter.swift in Sources */,
+				67CBEE81255FF01800F38C52 /* ScanInteractor.swift in Sources */,
 				67CBEDFC255FEF7400F38C52 /* SceneDelegate.swift in Sources */,
+				67CBEE7E255FF01800F38C52 /* ScanView.swift in Sources */,
+				67CBEE80255FF01800F38C52 /* ScanProtocols.swift in Sources */,
+				67CBEE37255FEFE200F38C52 /* HomeInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		67CBEDFF255FEF7400F38C52 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				67CBEE00255FEF7400F38C52 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		67CBEE04255FEF7500F38C52 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -296,7 +549,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = AFSopra.BarCodeScan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -315,7 +568,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = AFSopra.BarCodeScan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
