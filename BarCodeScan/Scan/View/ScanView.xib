@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ScanView">
             <connections>
+                <outlet property="indicatorSpinner" destination="GXg-BM-oVt" id="890-tw-K25"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,8 +18,22 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="GXg-BM-oVt">
+                    <rect key="frame" x="188.5" y="274.5" width="37" height="37"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="37" id="XgR-cE-ARl"/>
+                        <constraint firstAttribute="width" constant="37" id="qDI-LO-ioB"/>
+                    </constraints>
+                    <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </activityIndicatorView>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="GXg-BM-oVt" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="cb0-ZK-uHi"/>
+                <constraint firstItem="GXg-BM-oVt" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" constant="-160" id="fe7-zj-9pz"/>
+            </constraints>
             <point key="canvasLocation" x="19" y="80"/>
         </view>
     </objects>

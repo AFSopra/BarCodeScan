@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		672E1C9125606B21006F549B /* CornersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672E1C9025606B21006F549B /* CornersView.swift */; };
+		672E1C9425606B49006F549B /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672E1C9325606B49006F549B /* PaddingLabel.swift */; };
 		67CBEDFA255FEF7400F38C52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CBEDF9255FEF7400F38C52 /* AppDelegate.swift */; };
 		67CBEDFC255FEF7400F38C52 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CBEDFB255FEF7400F38C52 /* SceneDelegate.swift */; };
 		67CBEE03255FEF7500F38C52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67CBEE02255FEF7500F38C52 /* Assets.xcassets */; };
@@ -35,6 +37,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		672E1C9025606B21006F549B /* CornersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornersView.swift; sourceTree = "<group>"; };
+		672E1C9325606B49006F549B /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 		67CBEDF6255FEF7400F38C52 /* BarCodeScan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarCodeScan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67CBEDF9255FEF7400F38C52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67CBEDFB255FEF7400F38C52 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -116,6 +120,8 @@
 		67CBEE11255FEFA200F38C52 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				672E1C9025606B21006F549B /* CornersView.swift */,
+				672E1C9325606B49006F549B /* PaddingLabel.swift */,
 				67CBEE04255FEF7500F38C52 /* LaunchScreen.storyboard */,
 				67CBEE02255FEF7500F38C52 /* Assets.xcassets */,
 			);
@@ -391,10 +397,12 @@
 				67CBEE5B255FEFF900F38C52 /* DetailProtocols.swift in Sources */,
 				67CBEE5D255FEFF900F38C52 /* DetailRouter.swift in Sources */,
 				67CBEE34255FEFE200F38C52 /* HomeView.swift in Sources */,
+				672E1C9425606B49006F549B /* PaddingLabel.swift in Sources */,
 				67CBEE59255FEFF900F38C52 /* DetailView.swift in Sources */,
 				67CBEE36255FEFE200F38C52 /* HomeProtocols.swift in Sources */,
 				67CBEE5C255FEFF900F38C52 /* DetailInteractor.swift in Sources */,
 				67CBEE58255FEFF900F38C52 /* DetailModel.swift in Sources */,
+				672E1C9125606B21006F549B /* CornersView.swift in Sources */,
 				67CBEE38255FEFE200F38C52 /* HomeRouter.swift in Sources */,
 				67CBEE81255FF01800F38C52 /* ScanInteractor.swift in Sources */,
 				67CBEDFC255FEF7400F38C52 /* SceneDelegate.swift in Sources */,

@@ -37,5 +37,8 @@ final class HomeRouter {
 }
 
 extension HomeRouter: HomeRouterProtocol {
-
+    func presentScan() {
+        let screen = ScanRouter.assembleModule()
+        view.navigationController?.pushViewController(screen, animated: true)
+    }
 }

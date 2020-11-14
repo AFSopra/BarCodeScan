@@ -10,6 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeView">
             <connections>
+                <outlet property="barCodeButton" destination="Fna-rb-qu3" id="e6m-Zn-sXt"/>
+                <outlet property="titleTest" destination="tA3-9e-PDF" id="AOk-Ef-v2T"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,8 +19,41 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fna-rb-qu3">
+                    <rect key="frame" x="120" y="423" width="174" height="60"/>
+                    <color key="backgroundColor" red="0.78738981490000004" green="0.2464441359" blue="0.27221894260000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="VJS-ly-12w"/>
+                        <constraint firstAttribute="height" constant="60" id="cQJ-vC-L1h"/>
+                    </constraints>
+                    <state key="normal" title="BarCode">
+                        <color key="titleColor" white="0.95999999999999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="barCodeButtonPressed" destination="-1" eventType="touchUpInside" id="gru-yK-mTS"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tA3-9e-PDF">
+                    <rect key="frame" x="40" y="64" width="334" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="mI7-nG-rvU"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="30"/>
+                    <color key="textColor" red="0.78738981490000004" green="0.2464441359" blue="0.27221894260000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Fna-rb-qu3" secondAttribute="trailing" constant="120" id="0gM-DU-PAx"/>
+                <constraint firstItem="Fna-rb-qu3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="120" id="5po-mM-T2w"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="tA3-9e-PDF" secondAttribute="trailing" constant="40" id="BjK-JY-rSc"/>
+                <constraint firstItem="tA3-9e-PDF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="N8Q-3z-VNS"/>
+                <constraint firstItem="Fna-rb-qu3" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="ZDN-Ga-BJv"/>
+                <constraint firstItem="tA3-9e-PDF" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="yaF-Yl-YTE"/>
+            </constraints>
             <point key="canvasLocation" x="19" y="80"/>
         </view>
     </objects>

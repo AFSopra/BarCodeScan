@@ -37,5 +37,12 @@ final class ScanRouter {
 }
 
 extension ScanRouter: ScanRouterProtocol {
-
+    func presentDetail() {
+        let screen = DetailRouter.assembleModule()
+        view.navigationController?.pushViewController(screen, animated: true)
+    }
+    
+    func onBackButtonTapped(){
+        self.view.navigationController?.popViewController(animated: true)
+    }
 }

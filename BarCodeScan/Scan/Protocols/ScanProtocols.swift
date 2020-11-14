@@ -17,9 +17,13 @@ protocol ScanInteractorProtocol {
 }
 
 protocol ScanPresenterProtocol {
-    
+    func viewWillAppear()
+    func viewDidDisappear()
+    func onBackButtonTapped()
+    func presentDetail()
 }
 
 protocol ScanRouterProtocol {
-    
+    func presentDetail()
+    func onBackButtonTapped()
 }

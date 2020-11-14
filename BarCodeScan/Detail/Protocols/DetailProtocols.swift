@@ -17,7 +17,8 @@ protocol DetailInteractorProtocol {
 }
 
 protocol DetailPresenterProtocol {
-    
+    func viewDidLoad()
+    func onBackButtonTapped()
 }
 
 protocol DetailRouterProtocol {

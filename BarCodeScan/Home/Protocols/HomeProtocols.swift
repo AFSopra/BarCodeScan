@@ -9,7 +9,7 @@
 import Foundation
 
 protocol HomeViewProtocol {
-
+    
 }
 
 protocol HomeInteractorProtocol {
@@ -17,9 +17,10 @@ protocol HomeInteractorProtocol {
 }
 
 protocol HomePresenterProtocol {
-    
+    func viewDidLoad()
+    func presentScan()
 }
 
 protocol HomeRouterProtocol {
-    
+    func presentScan()
 }

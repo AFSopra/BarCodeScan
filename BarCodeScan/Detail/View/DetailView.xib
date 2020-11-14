@@ -17,8 +17,24 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGi-cp-Qhh">
+                    <rect key="frame" x="20" y="74" width="374" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="jAt-b7-9M7"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="20"/>
+                    <color key="textColor" red="0.81568627449999997" green="0.0078431372550000003" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="wGi-cp-Qhh" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="Mt7-8C-Gdg"/>
+                <constraint firstItem="wGi-cp-Qhh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="ShE-cm-EfK"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wGi-cp-Qhh" secondAttribute="trailing" constant="20" id="emt-r5-p4a"/>
+            </constraints>
             <point key="canvasLocation" x="19" y="80"/>
         </view>
     </objects>

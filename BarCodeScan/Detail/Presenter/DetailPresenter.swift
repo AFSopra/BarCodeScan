@@ -21,5 +21,11 @@ final class DetailPresenter {
 }
 
 extension DetailPresenter: DetailPresenterProtocol {
-
+    func viewDidLoad() {
+        
+    }
+    
+    func onBackButtonTapped() {
+//        self.router.
+    }
 } 
