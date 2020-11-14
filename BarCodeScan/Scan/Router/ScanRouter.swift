@@ -14,7 +14,7 @@ final class ScanRouter {
     init(withView view: ScanView) {
         self.view = view
     }
-    
+
     static func assembleModule(withinNavController: Bool = false) -> UIViewController {
         let viewController = viewControllerFromStoryboard()
         let router = ScanRouter(withView: viewController)
@@ -30,7 +30,7 @@ final class ScanRouter {
 
         return viewController
     }
-    
+
     static func viewControllerFromStoryboard() -> ScanView {
         return ScanView(nibName: "ScanView", bundle: Bundle.main)
     }
@@ -41,8 +41,8 @@ extension ScanRouter: ScanRouterProtocol {
         let screen = DetailRouter.assembleModule()
         view.navigationController?.pushViewController(screen, animated: true)
     }
-    
-    func onBackButtonTapped(){
-        self.view.navigationController?.popViewController(animated: true)
+
+    func onBackButtonTapped() {
+        view.navigationController?.popViewController(animated: true)
     }
 }

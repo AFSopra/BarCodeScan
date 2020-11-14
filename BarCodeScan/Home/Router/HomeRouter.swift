@@ -14,7 +14,7 @@ final class HomeRouter {
     init(withView view: HomeView) {
         self.view = view
     }
-    
+
     static func assembleModule(withinNavController: Bool = false) -> UIViewController {
         let viewController = viewControllerFromStoryboard()
         let router = HomeRouter(withView: viewController)
@@ -30,7 +30,7 @@ final class HomeRouter {
 
         return viewController
     }
-    
+
     static func viewControllerFromStoryboard() -> HomeView {
         return HomeView(nibName: "HomeView", bundle: Bundle.main)
     }

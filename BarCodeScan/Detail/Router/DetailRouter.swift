@@ -14,7 +14,7 @@ final class DetailRouter {
     init(withView view: DetailView) {
         self.view = view
     }
-    
+
     static func assembleModule(withinNavController: Bool = false) -> UIViewController {
         let viewController = viewControllerFromStoryboard()
         let router = DetailRouter(withView: viewController)
@@ -30,12 +30,14 @@ final class DetailRouter {
 
         return viewController
     }
-    
+
     static func viewControllerFromStoryboard() -> DetailView {
         return DetailView(nibName: "DetailView", bundle: Bundle.main)
     }
 }
 
 extension DetailRouter: DetailRouterProtocol {
-
+    func onBackButtonTapped() {
+        view.navigationController?.popViewController(animated: true)
+    }
 }

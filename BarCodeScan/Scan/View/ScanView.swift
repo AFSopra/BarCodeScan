@@ -6,38 +6,38 @@
 //  Copyright © 2020 AFSopra. All rights reserved.
 //
 
-import UIKit
 import AVFoundation
+import UIKit
 
 private enum BarCodeConstants {
-    static let exitButtonHeight: CGFloat = CGFloat(44)
-    static let exitButtonWidth: CGFloat = CGFloat(44)
-    static let safeDistanceExitButtonX: CGFloat = CGFloat(10)
-    static let safeDistanceExitButtonY: CGFloat = CGFloat(20)
-    static let safeDistanceOverlay: CGFloat = CGFloat(40)
-    static let overlayHalfHeight: CGFloat = CGFloat(130)
-    static let overlayHalfWidth: CGFloat = CGFloat(40)
-    static let cornerHeight: CGFloat = CGFloat(0)
-    static let cornerWidth: CGFloat = CGFloat(0)
-    static let safeDistanceLabelX: CGFloat = CGFloat(20)
-    static let topDistanceFrameLabel: CGFloat = CGFloat(60)
-    static let paddingLabel: CGFloat = CGFloat(15)
-    static let paddingCornersLayer: CGFloat = CGFloat(16)
-    static let bottomLabelHeight: CGFloat = CGFloat(100)
+    static let exitButtonHeight = CGFloat(44)
+    static let exitButtonWidth = CGFloat(44)
+    static let safeDistanceExitButtonX = CGFloat(10)
+    static let safeDistanceExitButtonY = CGFloat(20)
+    static let safeDistanceOverlay = CGFloat(40)
+    static let overlayHalfHeight = CGFloat(130)
+    static let overlayHalfWidth = CGFloat(40)
+    static let cornerHeight = CGFloat(0)
+    static let cornerWidth = CGFloat(0)
+    static let safeDistanceLabelX = CGFloat(20)
+    static let topDistanceFrameLabel = CGFloat(60)
+    static let paddingLabel = CGFloat(15)
+    static let paddingCornersLayer = CGFloat(16)
+    static let bottomLabelHeight = CGFloat(100)
 }
 
 class ScanView: UIViewController {
     var presenter: ScanPresenterProtocol!
 
     @IBOutlet private weak var indicatorSpinner: UIActivityIndicatorView!
-    
-    fileprivate var detectionView: UIView = UIView()
+
+    fileprivate var detectionView = UIView()
     fileprivate var captureSession: AVCaptureSession?
     fileprivate var videoPreviewLayer: AVCaptureVideoPreviewLayer?
 
-    fileprivate let purpleColor: UIColor = UIColor(red: CGFloat(78.0 / 255.0), green: CGFloat(77.0 / 255.0), blue: CGFloat(128.0 / 255.0), alpha: CGFloat(1.0))
-    fileprivate let blueColor: UIColor = UIColor(red: CGFloat(22.0 / 255.0), green: CGFloat(25.0 / 255.0), blue: CGFloat(91.0 / 255.0), alpha: CGFloat(1.0))
-    
+    fileprivate let purpleColor = UIColor(red: CGFloat(78.0 / 255.0), green: CGFloat(77.0 / 255.0), blue: CGFloat(128.0 / 255.0), alpha: CGFloat(1.0))
+    fileprivate let blueColor = UIColor(red: CGFloat(22.0 / 255.0), green: CGFloat(25.0 / 255.0), blue: CGFloat(91.0 / 255.0), alpha: CGFloat(1.0))
+
     lazy var bottomLabel: PaddingLabel = {
         let label = PaddingLabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -53,11 +53,11 @@ class ScanView: UIViewController {
 
         return label
     }()
-    
+
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         self.presenter.viewWillAppear()
-        
+
         self.stopSpinner()
     }
 
@@ -65,7 +65,7 @@ class ScanView: UIViewController {
         super.viewWillAppear(animated)
         self.presenter.viewWillAppear()
 
-        videoPreviewLayer?.frame = self.view.bounds
+        self.videoPreviewLayer?.frame = self.view.bounds
 
         self.stopSpinner()
         self.setCamera()
@@ -74,7 +74,7 @@ class ScanView: UIViewController {
         self.createExitButton()
         self.addIndicatorView()
     }
-    
+
     fileprivate func startSpinner() {
         DispatchQueue.main.async {
             self.indicatorSpinner.startAnimating()
@@ -88,16 +88,16 @@ class ScanView: UIViewController {
             self.indicatorSpinner.isHidden = true
         }
     }
-    
+
     fileprivate func setCamera() {
         guard let captureDevice = AVCaptureDevice.default(for: AVMediaType.video) else {
             return
         }
 
         do {
-            guard let input = try? AVCaptureDeviceInput.init(device: captureDevice) else { return }
-            captureSession = AVCaptureSession()
-            captureSession?.addInput(input)
+            guard let input = try? AVCaptureDeviceInput(device: captureDevice) else { return }
+            self.captureSession = AVCaptureSession()
+            self.captureSession?.addInput(input)
             let captureMetadataOutput = AVCaptureMetadataOutput()
             captureSession?.addOutput(captureMetadataOutput)
             captureMetadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
@@ -117,7 +117,7 @@ class ScanView: UIViewController {
         button.backgroundColor = self.purpleColor
         button.layer.cornerRadius = BarCodeConstants.exitButtonWidth / 2
         button.setTitle("X", for: .normal)
-        button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        button.addTarget(self, action: #selector(self.buttonAction), for: .touchUpInside)
 
         self.view.addSubview(button)
     }
@@ -188,14 +188,13 @@ class ScanView: UIViewController {
     }
 }
 
-extension ScanView: ScanViewProtocol {
-
-}
+extension ScanView: ScanViewProtocol {}
 
 extension ScanView: AVCaptureMetadataOutputObjectsDelegate {
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
         if let readableObjectCode = metadataObjects.first as? AVMetadataMachineReadableCodeObject,
-            let code = readableObjectCode.stringValue?.components(separatedBy: .whitespaces).joined() {
+           let code = readableObjectCode.stringValue?.components(separatedBy: .whitespaces).joined()
+        {
             DispatchQueue.main.async {
                 self.startSpinner()
                 self.captureSession?.stopRunning()

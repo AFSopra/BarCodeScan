@@ -21,19 +21,15 @@ final class ScanPresenter {
 }
 
 extension ScanPresenter: ScanPresenterProtocol {
-    func viewWillAppear() {
-        
-    }
-    
-    func viewDidDisappear() {
-        
-    }
+    func viewWillAppear() {}
+
+    func viewDidDisappear() {}
 
     func onBackButtonTapped() {
         self.router.onBackButtonTapped()
     }
-    
+
     func presentDetail() {
         self.router.presentDetail()
     }
-} 
+}

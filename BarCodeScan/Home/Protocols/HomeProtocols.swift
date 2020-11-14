@@ -8,13 +8,9 @@
 
 import Foundation
 
-protocol HomeViewProtocol {
-    
-}
+protocol HomeViewProtocol {}
 
-protocol HomeInteractorProtocol {
-    
-}
+protocol HomeInteractorProtocol {}
 
 protocol HomePresenterProtocol {
     func viewDidLoad()

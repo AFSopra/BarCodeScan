@@ -8,13 +8,9 @@
 
 import Foundation
 
-protocol ScanViewProtocol {
+protocol ScanViewProtocol {}
 
-}
-
-protocol ScanInteractorProtocol {
-    
-}
+protocol ScanInteractorProtocol {}
 
 protocol ScanPresenterProtocol {
     func viewWillAppear()

@@ -13,27 +13,25 @@ class HomeView: UIViewController {
 
     @IBOutlet private weak var titleTest: UILabel!
     @IBOutlet private weak var barCodeButton: UIButton!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.presenter.viewDidLoad()
-        
+
         self.setupUI()
     }
-    
+
     private func setupUI() {
         self.navigationController?.navigationBar.isHidden = true
-        
+
         self.titleTest.text = "BarCode Test"
 
         self.barCodeButton.layer.cornerRadius = CGFloat(8.0)
     }
-    
+
     @IBAction func barCodeButtonPressed() {
         self.presenter.presentScan()
     }
 }
 
-extension HomeView: HomeViewProtocol {
-
-}
+extension HomeView: HomeViewProtocol {}

@@ -9,11 +9,7 @@
 import UIKit
 
 final class ScanInteractor {
-    init() {
-
-    }
+    init() {}
 }
 
-extension ScanInteractor: ScanInteractorProtocol {
-
-}
+extension ScanInteractor: ScanInteractorProtocol {}

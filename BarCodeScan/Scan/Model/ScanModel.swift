@@ -9,7 +9,5 @@
 import Foundation
 
 final class ScanModel {
-
-    init() {
-    }
+    init() {}
 }

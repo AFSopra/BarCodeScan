@@ -9,11 +9,7 @@
 import UIKit
 
 final class HomeInteractor {
-    init() {
-
-    }
+    init() {}
 }
 
-extension HomeInteractor: HomeInteractorProtocol {
-
-}
+extension HomeInteractor: HomeInteractorProtocol {}

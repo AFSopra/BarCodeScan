@@ -21,12 +21,9 @@ final class HomePresenter {
 }
 
 extension HomePresenter: HomePresenterProtocol {
-    func viewDidLoad() {
-        
-    }
-    
+    func viewDidLoad() {}
+
     func presentScan() {
         self.router.presentScan()
     }
-} 
-
+}

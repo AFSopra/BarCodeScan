@@ -8,13 +8,9 @@
 
 import Foundation
 
-protocol DetailViewProtocol {
+protocol DetailViewProtocol {}
 
-}
-
-protocol DetailInteractorProtocol {
-    
-}
+protocol DetailInteractorProtocol {}
 
 protocol DetailPresenterProtocol {
     func viewDidLoad()
@@ -22,5 +18,5 @@ protocol DetailPresenterProtocol {
 }
 
 protocol DetailRouterProtocol {
-    
+    func onBackButtonTapped()
 }

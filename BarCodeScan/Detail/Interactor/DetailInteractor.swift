@@ -9,11 +9,7 @@
 import UIKit
 
 final class DetailInteractor {
-    init() {
-
-    }
+    init() {}
 }
 
-extension DetailInteractor: DetailInteractorProtocol {
-
-}
+extension DetailInteractor: DetailInteractorProtocol {}
