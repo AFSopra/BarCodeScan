@@ -37,9 +37,11 @@ final class ScanRouter {
 }
 
 extension ScanRouter: ScanRouterProtocol {
-    func presentDetail() {
-        let screen = DetailRouter.assembleModule()
-        view.navigationController?.pushViewController(screen, animated: true)
+    func presentDetail(code: String) {
+        if let screen = DetailRouter.assembleModule() as? DetailView {
+            screen.barCodeText = code
+            view.navigationController?.pushViewController(screen, animated: true)
+        }
     }
 
     func onBackButtonTapped() {

@@ -16,10 +16,10 @@ protocol ScanPresenterProtocol {
     func viewWillAppear()
     func viewDidDisappear()
     func onBackButtonTapped()
-    func presentDetail()
+    func presentDetail(code: String)
 }
 
 protocol ScanRouterProtocol {
-    func presentDetail()
+    func presentDetail(code: String)
     func onBackButtonTapped()
 }

@@ -29,7 +29,7 @@ extension ScanPresenter: ScanPresenterProtocol {
         self.router.onBackButtonTapped()
     }
 
-    func presentDetail() {
-        self.router.presentDetail()
+    func presentDetail(code: String) {
+        self.router.presentDetail(code: code)
     }
 }

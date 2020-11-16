@@ -24,6 +24,6 @@ extension DetailPresenter: DetailPresenterProtocol {
     func viewDidLoad() {}
 
     func onBackButtonTapped() {
-//        self.router.
+        self.router.onBackButtonTapped()
     }
 }

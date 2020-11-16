@@ -114,8 +114,8 @@
 		67CBEE11255FEFA200F38C52 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				672E1C9025606B21006F549B /* CornersView.swift */,
-				672E1C9325606B49006F549B /* PaddingLabel.swift */,
+				67F1E75325626FCB00097A7A /* PaddingLabel */,
+				67F1E75225626FC200097A7A /* CornersView */,
 				67CBEE04255FEF7500F38C52 /* LaunchScreen.storyboard */,
 				67CBEE02255FEF7500F38C52 /* Assets.xcassets */,
 			);
@@ -279,6 +279,22 @@
 				67CBEE7B255FF01800F38C52 /* ScanRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		67F1E75225626FC200097A7A /* CornersView */ = {
+			isa = PBXGroup;
+			children = (
+				672E1C9025606B21006F549B /* CornersView.swift */,
+			);
+			path = CornersView;
+			sourceTree = "<group>";
+		};
+		67F1E75325626FCB00097A7A /* PaddingLabel */ = {
+			isa = PBXGroup;
+			children = (
+				672E1C9325606B49006F549B /* PaddingLabel.swift */,
+			);
+			path = PaddingLabel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

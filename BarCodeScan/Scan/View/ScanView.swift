@@ -16,7 +16,7 @@ private enum BarCodeConstants {
     static let safeDistanceExitButtonY = CGFloat(20)
     static let safeDistanceOverlay = CGFloat(40)
     static let overlayHalfHeight = CGFloat(130)
-    static let overlayHalfWidth = CGFloat(40)
+    static let overlayWidth = CGFloat(80)
     static let cornerHeight = CGFloat(0)
     static let cornerWidth = CGFloat(0)
     static let safeDistanceLabelX = CGFloat(20)
@@ -24,41 +24,43 @@ private enum BarCodeConstants {
     static let paddingLabel = CGFloat(15)
     static let paddingCornersLayer = CGFloat(16)
     static let bottomLabelHeight = CGFloat(100)
+    static let purpleColor = UIColor(red: CGFloat(78.0 / 255.0), green: CGFloat(77.0 / 255.0), blue: CGFloat(128.0 / 255.0), alpha: CGFloat(1.0))
+    static let purpleColorBackground = UIColor(red: CGFloat(78.0 / 255.0), green: CGFloat(77.0 / 255.0), blue: CGFloat(128.0 / 255.0), alpha: CGFloat(0.4))
+    static let blueColor = UIColor(red: CGFloat(22.0 / 255.0), green: CGFloat(25.0 / 255.0), blue: CGFloat(91.0 / 255.0), alpha: CGFloat(1.0))
 }
 
-class ScanView: UIViewController {
+final class ScanView: UIViewController {
     var presenter: ScanPresenterProtocol!
 
     @IBOutlet private weak var indicatorSpinner: UIActivityIndicatorView!
 
+    // MARK: BarCodeScan components
     fileprivate var detectionView = UIView()
     fileprivate var captureSession: AVCaptureSession?
     fileprivate var videoPreviewLayer: AVCaptureVideoPreviewLayer?
-
-    fileprivate let purpleColor = UIColor(red: CGFloat(78.0 / 255.0), green: CGFloat(77.0 / 255.0), blue: CGFloat(128.0 / 255.0), alpha: CGFloat(1.0))
-    fileprivate let blueColor = UIColor(red: CGFloat(22.0 / 255.0), green: CGFloat(25.0 / 255.0), blue: CGFloat(91.0 / 255.0), alpha: CGFloat(1.0))
 
     lazy var bottomLabel: PaddingLabel = {
         let label = PaddingLabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
         label.numberOfLines = 0
-        label.backgroundColor = self.purpleColor
+        label.backgroundColor = BarCodeConstants.purpleColor
         label.textColor = .white
         label.text = "Mueva el dispositivo y ajuste el código de barras dentro del espacio dedicado en la pantalla."
         label.leftInset = BarCodeConstants.paddingLabel
         label.rightInset = BarCodeConstants.paddingLabel
         label.shadowOffset = CGSize(width: 1, height: 1)
         label.shadowColor = UIColor.black
-
         return label
     }()
 
+    // MARK: Lifecycle methods
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        self.presenter.viewWillAppear()
+        self.presenter.viewDidDisappear()
 
         self.stopSpinner()
+        self.stopBarCodeScan()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -68,13 +70,13 @@ class ScanView: UIViewController {
         self.videoPreviewLayer?.frame = self.view.bounds
 
         self.stopSpinner()
-        self.setCamera()
+        self.setBarCodeScan()
         self.addOverlay()
         self.addLabelOverlay()
         self.createExitButton()
-        self.addIndicatorView()
     }
 
+    // MARK: Activity indicator methods
     fileprivate func startSpinner() {
         DispatchQueue.main.async {
             self.indicatorSpinner.startAnimating()
@@ -89,7 +91,23 @@ class ScanView: UIViewController {
         }
     }
 
-    fileprivate func setCamera() {
+    // MARK: UI methods
+    private func createExitButton() {
+        let button = UIButton(frame: CGRect(x: self.view.frame.maxX - BarCodeConstants.exitButtonWidth - BarCodeConstants.safeDistanceExitButtonX, y: self.view.frame.minY + BarCodeConstants.exitButtonHeight + BarCodeConstants.safeDistanceExitButtonY, width: BarCodeConstants.exitButtonWidth, height: BarCodeConstants.exitButtonHeight))
+        button.backgroundColor = BarCodeConstants.purpleColor
+        button.layer.cornerRadius = BarCodeConstants.exitButtonWidth / 2
+        button.setTitle("X", for: .normal)
+        button.addTarget(self, action: #selector(self.buttonAction), for: .touchUpInside)
+
+        self.view.addSubview(button)
+    }
+
+    @objc func buttonAction() {
+        self.presenter.onBackButtonTapped()
+    }
+
+    // MARK: BarCodeScan methods
+    fileprivate func setBarCodeScan() {
         guard let captureDevice = AVCaptureDevice.default(for: AVMediaType.video) else {
             return
         }
@@ -112,20 +130,11 @@ class ScanView: UIViewController {
         }
     }
 
-    private func createExitButton() {
-        let button = UIButton(frame: CGRect(x: self.view.frame.maxX - BarCodeConstants.exitButtonWidth - BarCodeConstants.safeDistanceExitButtonX, y: self.view.frame.minY + BarCodeConstants.exitButtonHeight + BarCodeConstants.safeDistanceExitButtonY, width: BarCodeConstants.exitButtonWidth, height: BarCodeConstants.exitButtonHeight))
-        button.backgroundColor = self.purpleColor
-        button.layer.cornerRadius = BarCodeConstants.exitButtonWidth / 2
-        button.setTitle("X", for: .normal)
-        button.addTarget(self, action: #selector(self.buttonAction), for: .touchUpInside)
-
-        self.view.addSubview(button)
+    fileprivate func stopBarCodeScan() {
+        self.captureSession?.stopRunning()
     }
 
-    @objc func buttonAction() {
-        self.presenter.onBackButtonTapped()
-    }
-
+    // MARK: Overlay scan methods
     func addOverlay() {
         self.detectionView = self.createOverlay()
         self.view.addSubview(self.detectionView)
@@ -133,19 +142,19 @@ class ScanView: UIViewController {
 
     func createOverlay() -> UIView {
         let overlayView = UIView(frame: view.frame)
-        overlayView.backgroundColor = self.purpleColor.withAlphaComponent(0.4)
+        overlayView.backgroundColor = BarCodeConstants.purpleColorBackground
 
         let path = CGMutablePath()
 
-        path.addRoundedRect(in: CGRect(x: BarCodeConstants.safeDistanceOverlay, y: overlayView.center.y - BarCodeConstants.overlayHalfHeight, width: overlayView.frame.width - 2 * BarCodeConstants.overlayHalfWidth, height: 2 * BarCodeConstants.overlayHalfHeight), cornerWidth: BarCodeConstants.cornerWidth, cornerHeight: BarCodeConstants.cornerHeight)
+        path.addRoundedRect(in: CGRect(x: BarCodeConstants.safeDistanceOverlay, y: overlayView.center.y - BarCodeConstants.overlayHalfHeight, width: overlayView.frame.width - BarCodeConstants.overlayWidth, height: 2 * BarCodeConstants.overlayHalfHeight), cornerWidth: BarCodeConstants.cornerWidth, cornerHeight: BarCodeConstants.cornerHeight)
 
         path.closeSubpath()
 
         let shape = CAShapeLayer()
         shape.path = path
         shape.lineWidth = 0.2
-        shape.strokeColor = self.purpleColor.cgColor
-        shape.fillColor = self.purpleColor.cgColor
+        shape.strokeColor = BarCodeConstants.purpleColor.cgColor
+        shape.fillColor = BarCodeConstants.purpleColor.cgColor
 
         overlayView.layer.addSublayer(shape)
 
@@ -159,8 +168,8 @@ class ScanView: UIViewController {
         overlayView.layer.mask = maskLayer
         overlayView.clipsToBounds = true
 
-        let cornersView = CornersView(frame: CGRect(x: BarCodeConstants.safeDistanceOverlay + BarCodeConstants.paddingCornersLayer, y: overlayView.center.y - BarCodeConstants.overlayHalfHeight + BarCodeConstants.paddingCornersLayer, width: overlayView.frame.width - 2 * BarCodeConstants.overlayHalfWidth - 2 * BarCodeConstants.paddingCornersLayer, height: 2 * BarCodeConstants.overlayHalfHeight - 2 * BarCodeConstants.paddingCornersLayer))
-        cornersView.color = self.blueColor
+        let cornersView = CornersView(frame: CGRect(x: BarCodeConstants.safeDistanceOverlay + BarCodeConstants.paddingCornersLayer, y: overlayView.center.y - BarCodeConstants.overlayHalfHeight + BarCodeConstants.paddingCornersLayer, width: overlayView.frame.width - BarCodeConstants.overlayWidth - 2 * BarCodeConstants.paddingCornersLayer, height: 2 * BarCodeConstants.overlayHalfHeight - 2 * BarCodeConstants.paddingCornersLayer))
+        cornersView.color = BarCodeConstants.blueColor
         cornersView.thickness = 12
         cornersView.backgroundColor = .clear
         cornersView.layer.shadowColor = UIColor.black.cgColor
@@ -176,15 +185,11 @@ class ScanView: UIViewController {
         self.view.addSubview(self.bottomLabel)
 
         let leadingConstraint = NSLayoutConstraint(item: self.bottomLabel, attribute: .leading, relatedBy: .equal, toItem: self.view, attribute: .leading, multiplier: 1, constant: BarCodeConstants.safeDistanceLabelX)
-        let trailingConstraint = NSLayoutConstraint(item: self.view, attribute: .trailing, relatedBy: .equal, toItem: self.bottomLabel, attribute: .trailing, multiplier: 1, constant: BarCodeConstants.safeDistanceLabelX)
-
+        let trailingConstraint = NSLayoutConstraint(item: self.view ?? UIView(), attribute: .trailing, relatedBy: .equal, toItem: self.bottomLabel, attribute: .trailing, multiplier: 1, constant: BarCodeConstants.safeDistanceLabelX)
         let topConstraint = NSLayoutConstraint(item: self.bottomLabel, attribute: .top, relatedBy: .equal, toItem: self.view, attribute: .centerY, multiplier: 1, constant: BarCodeConstants.overlayHalfHeight + BarCodeConstants.topDistanceFrameLabel)
+        let heighConstraint = self.bottomLabel.heightAnchor.constraint(equalToConstant: BarCodeConstants.bottomLabelHeight)
 
-        NSLayoutConstraint.activate([leadingConstraint, trailingConstraint, topConstraint, self.bottomLabel.heightAnchor.constraint(equalToConstant: BarCodeConstants.bottomLabelHeight)])
-    }
-
-    func addIndicatorView() {
-        self.view.addSubview(self.indicatorSpinner)
+        NSLayoutConstraint.activate([leadingConstraint, trailingConstraint, topConstraint, heighConstraint])
     }
 }
 
@@ -201,7 +206,7 @@ extension ScanView: AVCaptureMetadataOutputObjectsDelegate {
 
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                     self.stopSpinner()
-                    self.presenter.presentDetail()
+                    self.presenter.presentDetail(code: code)
                 }
             }
         }
