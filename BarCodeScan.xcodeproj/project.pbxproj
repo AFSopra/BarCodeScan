@@ -14,21 +14,18 @@
 		67CBEE03255FEF7500F38C52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67CBEE02255FEF7500F38C52 /* Assets.xcassets */; };
 		67CBEE06255FEF7500F38C52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67CBEE04255FEF7500F38C52 /* LaunchScreen.storyboard */; };
 		67CBEE32255FEFE200F38C52 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CBEE26255FEFE200F38C52 /* HomePresenter.swift */; };
-		67CBEE33255FEFE200F38C52 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CBEE28255FEFE200F38C52 /* HomeModel.swift */; };
 		67CBEE34255FEFE200F38C52 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CBEE2A255FEFE200F38C52 /* HomeView.swift */; };
 		67CBEE35255FEFE200F38C52 /* HomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67CBEE2B255FEFE200F38C52 /* HomeView.xib */; };
 		67CBEE36255FEFE200F38C52 /* HomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CBEE2D255FEFE200F38C52 /* HomeProtocols.swift */; };
 		67CBEE37255FEFE200F38C52 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CBEE2F255FEFE200F38C52 /* HomeInteractor.swift */; };
 		67CBEE38255FEFE200F38C52 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CBEE31255FEFE200F38C52 /* HomeRouter.swift */; };
 		67CBEE57255FEFF900F38C52 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CBEE4B255FEFF900F38C52 /* DetailPresenter.swift */; };
-		67CBEE58255FEFF900F38C52 /* DetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CBEE4D255FEFF900F38C52 /* DetailModel.swift */; };
 		67CBEE59255FEFF900F38C52 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CBEE4F255FEFF900F38C52 /* DetailView.swift */; };
 		67CBEE5A255FEFF900F38C52 /* DetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67CBEE50255FEFF900F38C52 /* DetailView.xib */; };
 		67CBEE5B255FEFF900F38C52 /* DetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CBEE52255FEFF900F38C52 /* DetailProtocols.swift */; };
 		67CBEE5C255FEFF900F38C52 /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CBEE54255FEFF900F38C52 /* DetailInteractor.swift */; };
 		67CBEE5D255FEFF900F38C52 /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CBEE56255FEFF900F38C52 /* DetailRouter.swift */; };
 		67CBEE7C255FF01800F38C52 /* ScanPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CBEE70255FF01800F38C52 /* ScanPresenter.swift */; };
-		67CBEE7D255FF01800F38C52 /* ScanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CBEE72255FF01800F38C52 /* ScanModel.swift */; };
 		67CBEE7E255FF01800F38C52 /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CBEE74255FF01800F38C52 /* ScanView.swift */; };
 		67CBEE7F255FF01800F38C52 /* ScanView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67CBEE75255FF01800F38C52 /* ScanView.xib */; };
 		67CBEE80255FF01800F38C52 /* ScanProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CBEE77255FF01800F38C52 /* ScanProtocols.swift */; };
@@ -46,21 +43,18 @@
 		67CBEE05255FEF7500F38C52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		67CBEE07255FEF7500F38C52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		67CBEE26255FEFE200F38C52 /* HomePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
-		67CBEE28255FEFE200F38C52 /* HomeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		67CBEE2A255FEFE200F38C52 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		67CBEE2B255FEFE200F38C52 /* HomeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeView.xib; sourceTree = "<group>"; };
 		67CBEE2D255FEFE200F38C52 /* HomeProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeProtocols.swift; sourceTree = "<group>"; };
 		67CBEE2F255FEFE200F38C52 /* HomeInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		67CBEE31255FEFE200F38C52 /* HomeRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		67CBEE4B255FEFF900F38C52 /* DetailPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
-		67CBEE4D255FEFF900F38C52 /* DetailModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailModel.swift; sourceTree = "<group>"; };
 		67CBEE4F255FEFF900F38C52 /* DetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		67CBEE50255FEFF900F38C52 /* DetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailView.xib; sourceTree = "<group>"; };
 		67CBEE52255FEFF900F38C52 /* DetailProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailProtocols.swift; sourceTree = "<group>"; };
 		67CBEE54255FEFF900F38C52 /* DetailInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
 		67CBEE56255FEFF900F38C52 /* DetailRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
 		67CBEE70255FF01800F38C52 /* ScanPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanPresenter.swift; sourceTree = "<group>"; };
-		67CBEE72255FF01800F38C52 /* ScanModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanModel.swift; sourceTree = "<group>"; };
 		67CBEE74255FF01800F38C52 /* ScanView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanView.swift; sourceTree = "<group>"; };
 		67CBEE75255FF01800F38C52 /* ScanView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScanView.xib; sourceTree = "<group>"; };
 		67CBEE77255FF01800F38C52 /* ScanProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanProtocols.swift; sourceTree = "<group>"; };
@@ -135,7 +129,6 @@
 				67CBEE2E255FEFE200F38C52 /* Interactor */,
 				67CBEE2C255FEFE200F38C52 /* Protocols */,
 				67CBEE25255FEFE200F38C52 /* Presenter */,
-				67CBEE27255FEFE200F38C52 /* Model */,
 				67CBEE30255FEFE200F38C52 /* Router */,
 			);
 			path = Home;
@@ -147,14 +140,6 @@
 				67CBEE26255FEFE200F38C52 /* HomePresenter.swift */,
 			);
 			path = Presenter;
-			sourceTree = "<group>";
-		};
-		67CBEE27255FEFE200F38C52 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				67CBEE28255FEFE200F38C52 /* HomeModel.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		67CBEE29255FEFE200F38C52 /* View */ = {
@@ -197,7 +182,6 @@
 				67CBEE53255FEFF900F38C52 /* Interactor */,
 				67CBEE51255FEFF900F38C52 /* Protocols */,
 				67CBEE4A255FEFF900F38C52 /* Presenter */,
-				67CBEE4C255FEFF900F38C52 /* Model */,
 				67CBEE55255FEFF900F38C52 /* Router */,
 			);
 			path = Detail;
@@ -209,14 +193,6 @@
 				67CBEE4B255FEFF900F38C52 /* DetailPresenter.swift */,
 			);
 			path = Presenter;
-			sourceTree = "<group>";
-		};
-		67CBEE4C255FEFF900F38C52 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				67CBEE4D255FEFF900F38C52 /* DetailModel.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		67CBEE4E255FEFF900F38C52 /* View */ = {
@@ -259,7 +235,6 @@
 				67CBEE78255FF01800F38C52 /* Interactor */,
 				67CBEE76255FF01800F38C52 /* Protocols */,
 				67CBEE6F255FF01800F38C52 /* Presenter */,
-				67CBEE71255FF01800F38C52 /* Model */,
 				67CBEE7A255FF01800F38C52 /* Router */,
 			);
 			path = Scan;
@@ -271,14 +246,6 @@
 				67CBEE70255FF01800F38C52 /* ScanPresenter.swift */,
 			);
 			path = Presenter;
-			sourceTree = "<group>";
-		};
-		67CBEE71255FF01800F38C52 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				67CBEE72255FF01800F38C52 /* ScanModel.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		67CBEE73255FF01800F38C52 /* View */ = {
@@ -387,9 +354,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67CBEE7D255FF01800F38C52 /* ScanModel.swift in Sources */,
 				67CBEE82255FF01800F38C52 /* ScanRouter.swift in Sources */,
-				67CBEE33255FEFE200F38C52 /* HomeModel.swift in Sources */,
 				67CBEE32255FEFE200F38C52 /* HomePresenter.swift in Sources */,
 				67CBEE57255FEFF900F38C52 /* DetailPresenter.swift in Sources */,
 				67CBEE7C255FF01800F38C52 /* ScanPresenter.swift in Sources */,
@@ -401,7 +366,6 @@
 				67CBEE59255FEFF900F38C52 /* DetailView.swift in Sources */,
 				67CBEE36255FEFE200F38C52 /* HomeProtocols.swift in Sources */,
 				67CBEE5C255FEFF900F38C52 /* DetailInteractor.swift in Sources */,
-				67CBEE58255FEFF900F38C52 /* DetailModel.swift in Sources */,
 				672E1C9125606B21006F549B /* CornersView.swift in Sources */,
 				67CBEE38255FEFE200F38C52 /* HomeRouter.swift in Sources */,
 				67CBEE81255FF01800F38C52 /* ScanInteractor.swift in Sources */,
